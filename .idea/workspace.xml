@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99cb0abc-ef67-46bf-9de2-d91a69b928c0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24TYy1DhNsFTZiTIUFSV9xRceH3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lowe_\Desktop\School Files\Semester 4\PROG2430\Assignment 1\ALFeedbackA1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lowe_\Desktop\School Files\Semester 4\PROG2430\Assignment 2\ALFeedbackA2\js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99cb0abc-ef67-46bf-9de2-d91a69b928c0" name="Changes" comment="" />
+      <created>1643656295372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643656295372</updated>
+      <workItem from="1643656297356" duration="9099000" />
+      <workItem from="1644243280280" duration="179000" />
+      <workItem from="1645210608165" duration="11743000" />
+      <workItem from="1645313061875" duration="1828000" />
+      <workItem from="1645317313587" duration="221000" />
+      <workItem from="1645317539056" duration="9406000" />
+      <workItem from="1645406648323" duration="930000" />
+      <workItem from="1648175586071" duration="5263000" />
+      <workItem from="1648240151631" duration="16415000" />
+      <workItem from="1648355354798" duration="4697000" />
+      <workItem from="1648392627043" duration="806000" />
+      <workItem from="1648423230707" duration="11967000" />
+      <workItem from="1648741667118" duration="1812000" />
+      <workItem from="1648833561084" duration="25000" />
+      <workItem from="1649430435635" duration="595000" />
+      <workItem from="1649678618974" duration="1353000" />
+      <workItem from="1650211957445" duration="973000" />
+      <workItem from="1650213633989" duration="21000" />
+      <workItem from="1677182527961" duration="91000" />
+      <workItem from="1677182780453" duration="70000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

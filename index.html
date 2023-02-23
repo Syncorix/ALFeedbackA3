@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <link rel="stylesheet" href="css/lib/jquery.mobile-1.4.5.css">
+    <script src="js/ALglobal.js"></script>
+    <script src="js/ALDAL.js"></script>
+    <script src="js/ALdatabase.js"></script>
+    <script src="js/ALfacade.js"></script>
+    <script src="js/ALutil.js"></script>
+    <link rel="stylesheet" href="css/mystyle.css">
+
+</head>
+<body>
+    <div id="ALHomePage" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>AL Feedback A2</h1>
+            <nav data-role="navbar" data-position="top">
+                <ul>
+                    <li><a href="#ALHomePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#ALAddFeedbackPage" data-icon="plus">Add</a></li>
+                    <li><a href="#ALViewFeedbackPage" data-icon="grid">Reviews</a></li>
+                    <li><a href="#AlSettingsPage" data-icon="gear">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <h2>Aidan Lowe's Feedback A3 App</h2>
+            <p>
+                Welcome to the Aidan Lowe's Feedback A3 app. A prototype designed for mobile programming class.
+                This is the first iteration of the app to keep track of different places you visited along with your
+                reviews.
+            </p>
+            <img src="img/AL-image.png">
+            <p>
+                Please feel free to contact me if you have any suggestions!
+            </p>
+            <a href="#" data-role="button" data-icon="plus" data-iconpos="left">Call: 519.748.5220</a>
+            <a href="#" data-role="button" data-icon="plus" data-iconpos="left">Alowe6419@conestogac.on.ca</a>
+            <p>
+                Website
+            </p>
+            <a href="https://www.conestogac.on.ca/" data-role="button" data-icon="plus" data-iconpos="left">Conestoga College</a>
+
+
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h1>&copy; 2022 Aidan Lowe</h1>
+        </footer>
+    </div>
+
+    <div id="ALAddFeedbackPage" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Add Feedback</h1>
+            <nav data-role="navbar" data-position="top">
+                <ul>
+                    <li><a href="#ALHomePage" data-icon="home">Home</a></li>
+                    <li><a href="#ALAddFeedbackPage" data-icon="plus" class="ui-btn-active ui-state-persist">Add</a></li>
+                    <li><a href="#ALViewFeedbackPage" data-icon="grid">Reviews</a></li>
+                    <li><a href="#AlSettingsPage" data-icon="gear">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <form id="frmReviewAdd" name="frmReviewAdd">
+                <label for="txtBusinessNameAdd">Business Name:</label>
+                <input type="text" id="txtBusinessNameAdd" name="txtBusinessNameAdd" data-clear-btn="true">
+
+                <label for="txtTypeAdd">Type:</label>
+                <select name="txtTypeAdd" id="txtTypeAdd">
+
+                </select>
+
+                <label for="txtEmailAdd">Reviewer Email:</label>
+                <input type="text" id="txtEmailAdd" name="txtEmailAdd" data-clear-btn="true">
+
+                <label for="txtCommentsAdd">Reviewer Comments:</label>
+                <textarea type="text" id="txtCommentsAdd" name="txtCommentsAdd" data-clear-btn="true"></textarea>
+
+                <label for="txtDateAdd">Review Date:</label>
+                <input type="date" id="txtDateAdd" name="txtDateAdd" data-clear-btn="true">
+
+                <label for="ratingCheckbox">Do you want to add your ratings?</label>
+                <input type="checkbox" id="ratingCheckbox" name="ratingCheckbox" value="checked">
+
+                <div id="ratingInputs" style="display: none">
+                    <label for="txtFoodRatingAdd">Food Quality (0-5):</label>
+                    <input type="number" id="txtFoodRatingAdd" name="txtFoodRatingAdd" data-clear-btn="true" value="0">
+
+                    <label for="txtServiceRatingAdd">Service (0-5):</label>
+                    <input type="number" id="txtServiceRatingAdd" name="txtServiceRatingAdd" data-clear-btn="true" value="0">
+
+                    <label for="txtValueRatingAdd">Value (0-5):</label>
+                    <input type="number" id="txtValueRatingAdd" name="txtValueRatingAdd" data-clear-btn="true" value="0">
+
+                    <label for="txtRatingAdd">Overall Rating:</label>
+                    <input type="text" id="txtRatingAdd" name="txtRatingAdd" readonly>
+                </div>
+
+                <div data-role="controlgroup" data-type="horizontal">
+                    <button type="button" id="btnAdd" name="btnAdd" class="ui-btn-active" >Save</button>
+                </div>
+
+            </form>
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h1>&copy; 2022 Aidan Lowe</h1>
+        </footer>
+    </div>
+
+    <div id="ALViewFeedbackPage" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>List of Reviews</h1>
+            <nav data-role="navbar" data-position="top">
+                <ul>
+                    <li><a href="#ALHomePage" data-icon="home">Home</a></li>
+                    <li><a href="#ALAddFeedbackPage" data-icon="plus">Add</a></li>
+                    <li><a href="#ALViewFeedbackPage" data-icon="grid" class="ui-btn-active ui-state-persist">Reviews</a></li>
+                    <li><a href="#AlSettingsPage" data-icon="gear">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <ul id="ReviewList" data-role="listview" class="ui-listview-inset" data-icon="">
+
+            </ul>
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h1>&copy; 2022 Aidan Lowe</h1>
+        </footer>
+    </div>
+
+    <div id="ALModifyFeedbackPage" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Add Feedback</h1>
+            <nav data-role="navbar" data-position="top">
+                <ul>
+                    <li><a href="#ALHomePage" data-icon="home">Home</a></li>
+                    <li><a href="#ALAddFeedbackPage" data-icon="plus">Add</a></li>
+                    <li><a href="#ALViewFeedbackPage" data-icon="grid" class="ui-btn-active ui-state-persist">Reviews</a></li>
+                    <li><a href="#AlSettingsPage" data-icon="gear">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <form id="frmReviewUpdate" name="frmReviewUpdate">
+                <label for="txtBusinessNameUpdate">Business Name:</label>
+                <input type="text" id="txtBusinessNameUpdate" name="txtBusinessNameUpdate" data-clear-btn="true" value="Mcdonald's">
+
+                <label for="txtTypeUpdate">Type:</label>
+                <select name="txtTypeUpdate" id="txtTypeUpdate">
+
+                </select>
+
+                <label for="txtEmailUpdate">Reviewer Email:</label>
+                <input type="text" id="txtEmailUpdate" name="txtEmailUpdate" data-clear-btn="true" value="johnsmith@gmail.com">
+
+                <label for="txtCommentsUpdate">Reviewer Comments:</label>
+                <textarea type="text" id="txtCommentsUpdate" name="txtCommentsUpdate" data-clear-btn="true">Cheap.</textarea>
+
+                <label for="txtDateUpdate">Review Date:</label>
+                <input type="date" id="txtDateUpdate" name="txtDateUpdate" data-clear-btn="true">
+
+                <label for="ratingCheckboxUpdate">Do you want to add your ratings?</label>
+                <input type="checkbox" id="ratingCheckboxUpdate" name="ratingCheckboxUpdate" value="checked">
+
+                <div id="ratingInputsUpdate" style="display: none">
+                    <label for="txtFoodRatingUpdate">Food Quality (0-5):</label>
+                    <input type="number" id="txtFoodRatingUpdate" name="txtFoodRatingUpdate" data-clear-btn="true" value="0">
+
+                    <label for="txtServiceRatingUpdate">Service (0-5):</label>
+                    <input type="number" id="txtServiceRatingUpdate" name="txtServiceRatingUpdate" data-clear-btn="true" value="0">
+
+                    <label for="txtValueRatingUpdate">Value (0-5):</label>
+                    <input type="number" id="txtValueRatingUpdate" name="txtValueRatingUpdate" data-clear-btn="true" value="0">
+
+                    <label for="txtRatingUpdate">Overall Rating:</label>
+                    <input type="text" id="txtRatingUpdate" name="txtRatingUpdate" readonly>
+                </div>
+
+                <div data-role="controlgroup" data-type="horizontal">
+                    <button type="button" id="btnCancel" name="btnCancel">Cancel</button>
+                    <button type="button" id="btnDelete" name="btnDelete" data-theme="b">Delete</button>
+                    <button type="button" id="btnUpdate" name="btnUpdate" class="ui-btn-active">Update</button>
+
+                </div>
+
+            </form>
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h1>&copy; 2022 Aidan Lowe</h1>
+        </footer>
+    </div>
+
+    <div id="AlSettingsPage" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Settings</h1>
+            <nav data-role="navbar" data-position="top">
+                <ul>
+                    <li><a href="#ALHomePage" data-icon="home">Home</a></li>
+                    <li><a href="#ALAddFeedbackPage" data-icon="plus">Add</a></li>
+                    <li><a href="#ALViewFeedbackPage" data-icon="grid">Reviews</a></li>
+                    <li><a href="#AlSettingsPage" data-icon="gear" class="ui-btn-active ui-state-persist">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <form>
+                <label for="txtDefaultEmail">Default Reviewer Email:</label>
+                <input type="text" id="txtDefaultEmail" name="txtDefaultEmail" data-clear-btn="true" value="alowe6419@conestogac.on.ca">
+
+                <button type="button" id="btnSaveDefaults" name="btnSaveDefaults" class="ui-btn-active">Save Defaults</button>
+                <button type="button" id="btnClearDatabase" name="btnClearDatabase" data-theme="b">Clear Database</button>
+            </form>
+
+        </section>
+        <footer data-role="footer" data-position="fixed">
+            <h1>&copy; 2022 Aidan Lowe</h1>
+        </footer>
+    </div>
+</body>
+</html>
